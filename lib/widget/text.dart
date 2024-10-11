@@ -7,6 +7,8 @@ class MyTxt extends StatelessWidget {
   final Color textColor;
   final FontWeight fontWeight;
   final TextAlign? textAlign;
+  final int? maxLines; // Default to null
+  final TextOverflow? overflow; // Default to null
 
   const MyTxt({
     Key? key,
@@ -16,6 +18,8 @@ class MyTxt extends StatelessWidget {
     this.backgroundColor,
     required this.textColor,
     this.textAlign = TextAlign.left,
+    this.maxLines,
+    this.overflow,
   }) : super(key: key);
 
   @override
@@ -25,6 +29,8 @@ class MyTxt extends StatelessWidget {
       child: Text(
         text,
         textAlign: textAlign,
+        maxLines: maxLines, // No default value
+        overflow: overflow, // No default value
         style: TextStyle(
           backgroundColor: backgroundColor,
           color: textColor,

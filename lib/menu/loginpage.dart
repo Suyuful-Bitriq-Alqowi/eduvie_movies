@@ -36,7 +36,7 @@ class LoginPage extends StatelessWidget {
             const SizedBox(height: 20),
             const MyTxt(
               text:
-                  '" Watch your favorite films and series on one platform. Eduvie+ is always with you, anytime, anywhere. "',
+              '" Watch your favorite films and series on one platform. Eduvie+ is always with you, anytime, anywhere. "',
               fontSize: 16,
               textColor: whiteColor,
               fontWeight: FontWeight.w300,

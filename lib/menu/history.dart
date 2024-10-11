@@ -50,40 +50,6 @@ class HistoryMenu extends StatelessWidget {
               borderRadius: BorderRadius.circular(12),
             ),
             child: Row(
-              children: [
-                MyImg(
-                  imageUrl: movie['imageUrl']!,
-                  height: 150,
-                  width: 100,
-                  borderRadius: 12,
-                ),
-                const SizedBox(width: 10),
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      MyTxt(
-                        text: movie['title']!,
-                        fontSize: 28,
-                        textColor: whiteColor,  // Title in white
-                        fontWeight: FontWeight.w700,
-                      ),
-                      MyTxt(
-                        text: movie['studio']!,
-                        fontSize: 14,
-                        textColor: whiteColor,
-                        fontWeight: FontWeight.w300,
-                      ),
-                      const SizedBox(height: 8),
-                      MyTxt(
-                        text: movie['rating']!,
-                        fontSize: 14,
-                        textColor: rating,
-                      ),
-                    ],
-                  ),
-                ),
-              ],
             ),
           );
         },

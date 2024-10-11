@@ -25,7 +25,7 @@ class UpcomingMenu extends StatelessWidget {
                 MyTxt(
                   text: 'Hi, BiTriX',
                   fontSize: 20,
-                  fontWeight: FontWeight.bold,
+                  fontWeight: FontWeight.w700,
                   textColor: whiteColor,
                 ),
                 MyTxt(

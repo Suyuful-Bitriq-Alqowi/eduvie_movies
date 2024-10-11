@@ -20,8 +20,8 @@ class MyImg extends StatelessWidget {
       borderRadius: BorderRadius.circular(borderRadius),
       child: Image.asset(
         imageUrl,
-        height: height ?? 100,
-        width: width ?? 160,
+        height: height ?? 200,
+        width: width ?? 130,
         fit: BoxFit.cover,
       ),
     );

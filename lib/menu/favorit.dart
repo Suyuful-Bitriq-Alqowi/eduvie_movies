@@ -1,10 +1,8 @@
-import 'package:eduvie_movies/adapter/adapterhistory.dart';
-import 'package:eduvie_movies/data/history_data.dart';
 import 'package:eduvie_movies/widget/color.dart';
 import 'package:eduvie_movies/widget/text.dart';
 import 'package:flutter/material.dart';
 
-class HistoryMenu extends StatelessWidget {
+class FavoritMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,7 +23,7 @@ class HistoryMenu extends StatelessWidget {
                 MyTxt(
                   text: 'Hi, BiTriX',
                   fontSize: 20,
-                  fontWeight: FontWeight.bold,
+                  fontWeight: FontWeight.w700,
                   textColor: whiteColor,
                 ),
                 MyTxt(
@@ -37,18 +35,6 @@ class HistoryMenu extends StatelessWidget {
             ),
           ],
         ),
-      ),
-      body: ListView.builder(
-        itemCount: historyMovies.length,
-        itemBuilder: (context, index) {
-          final movie = historyMovies[index];
-          return AdapterHistory(
-            imageUrl: movie.imageUrl,
-            title: movie.title,
-            studio: movie.studio,
-            rating: movie.rating, genre: movie.genre,
-          );
-        },
       ),
     );
   }

@@ -8,8 +8,10 @@ class MyButton extends StatelessWidget {
   final Color buttonColor;
   final VoidCallback onPressed;
   final String? imageUrl;
+  final IconData? icon;
   final double? width;
-  final double? fontSize; // New parameter for font size
+  final double? height;
+  final double? fontSize;
   final FontWeight? fontWeight;
 
   const MyButton({
@@ -18,7 +20,9 @@ class MyButton extends StatelessWidget {
     required this.buttonColor,
     required this.onPressed,
     this.imageUrl,
+    this.icon,
     this.width,
+    this.height,
     this.fontSize,
     this.fontWeight,
   }) : super(key: key);
@@ -27,6 +31,7 @@ class MyButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: width ?? double.infinity,
+      height: 40,
       child: ElevatedButton(
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(
@@ -39,6 +44,12 @@ class MyButton extends StatelessWidget {
         child: Row(
           mainAxisSize: MainAxisSize.min,
           children: [
+            if (icon != null)
+              Icon(
+                icon,
+                color: whiteColor,
+              ),
+            if (icon != null) const SizedBox(width: 5),
             if (imageUrl != null)
               MyImg(
                 imageUrl: imageUrl!,

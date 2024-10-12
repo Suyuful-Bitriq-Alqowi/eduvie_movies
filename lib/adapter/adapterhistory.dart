@@ -1,17 +1,17 @@
-import 'package:flutter/material.dart';
 import 'package:eduvie_movies/widget/button.dart';
 import 'package:eduvie_movies/widget/color.dart';
+import 'package:flutter/material.dart';
 import 'package:eduvie_movies/widget/img.dart';
 import 'package:eduvie_movies/widget/text.dart';
 
-class AdapterHome extends StatelessWidget {
+class AdapterHistory extends StatelessWidget {
   final String imageUrl;
   final String title;
   final String studio;
   final String rating;
   final String genre;
 
-  const AdapterHome({
+  const AdapterHistory({
     Key? key,
     required this.imageUrl,
     required this.title,
@@ -33,7 +33,7 @@ class AdapterHome extends StatelessWidget {
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(16),
               ),
-              child: SingleChildScrollView(
+              child: Padding(
                 padding: const EdgeInsets.all(16.0),
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
@@ -41,8 +41,8 @@ class AdapterHome extends StatelessWidget {
                     Center(
                       child: MyImg(
                         imageUrl: imageUrl,
-                        height: 100,
-                        width: 170,
+                        height: 150,
+                        width: 120,
                         borderRadius: 12.0,
                       ),
                     ),
@@ -101,33 +101,50 @@ class AdapterHome extends StatelessWidget {
         );
       },
       child: Container(
-        width: 170,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+        margin: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(12.0),
+        decoration: BoxDecoration(
+          color: secondBackground,
+          borderRadius: BorderRadius.circular(12),
+        ),
+        child: Row(
           children: [
             MyImg(
               imageUrl: imageUrl,
-              height: 110,
-              width: 150,
+              height: 130,
+              width: 100,
               borderRadius: 8.0,
             ),
-            const SizedBox(height: 4),
-            MyTxt(
-              text: title,
-              fontSize: 18,
-              fontWeight: FontWeight.w600,
-              textColor: whiteColor,
-              maxLines: 1,
-              overflow: TextOverflow.ellipsis,
-            ),
-            const SizedBox(height: 2),
-            MyTxt(
-              text: genre,
-              fontSize: 12,
-              fontWeight: FontWeight.w400,
-              textColor: hintText,
-              maxLines: 1,
-              overflow: TextOverflow.ellipsis,
+            const SizedBox(width: 30),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  MyTxt(
+                    text: title,
+                    fontSize: 32,
+                    fontWeight: FontWeight.w700,
+                    textColor: whiteColor,
+                  ),
+                  const SizedBox(height: 4),
+                  MyTxt(
+                    text: studio,
+                    fontSize: 16,
+                    fontWeight: FontWeight.w400,
+                    textColor: hintText,
+                  ),
+                  const SizedBox(height: 4),
+                  Row(
+                    children: [
+                      MyTxt(
+                        text: rating,
+                        fontSize: 14,
+                        textColor: reddColor,
+                      ),
+                    ],
+                  ),
+                ],
+              ),
             ),
           ],
         ),

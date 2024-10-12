@@ -2,7 +2,7 @@ import 'package:eduvie_movies/controller/dashboard_controller.dart';
 import 'package:eduvie_movies/menu/history.dart';
 import 'package:eduvie_movies/menu/home.dart';
 import 'package:eduvie_movies/menu/profile.dart';
-import 'package:eduvie_movies/menu/upcoming.dart';
+import 'package:eduvie_movies/menu/favorit.dart';
 import 'package:eduvie_movies/widget/color.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -16,7 +16,7 @@ class DashboardPage extends StatelessWidget {
 
     final List<Widget> menus = [
       HomeMenu(),
-      UpcomingMenu(),
+      FavoritMenu(),
       HistoryMenu(),
       ProfileMenu()
     ];
@@ -39,7 +39,7 @@ class DashboardPage extends StatelessWidget {
           items: [
             BottomNavigationBarItem(
                 icon: Icon(Icons.home_outlined), label: "Home"),
-            BottomNavigationBarItem(icon: Icon(Icons.upcoming), label: "Upcoming"),
+            BottomNavigationBarItem(icon: Icon(Icons.favorite), label: "Favorit"),
             BottomNavigationBarItem(
                 icon: Icon(Icons.history_outlined), label: "History"),
             BottomNavigationBarItem(

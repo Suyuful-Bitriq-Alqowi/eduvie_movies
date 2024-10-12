@@ -102,6 +102,11 @@ flutter:
     - images/inception.png
     - images/shaw.png
     - images/spirited.png
+    - images/marnie.png
+    - images/heron.png
+    - images/heroes.png
+    - images/bubble.png
+    - images/mira.png
   # https://flutter.dev/assets-and-images/#resolution-aware
 
   # For details regarding adding assets from package dependencies, see

@@ -12,6 +12,7 @@ class HomeMenu extends StatelessWidget {
       backgroundColor: primaryBackground,
       appBar: AppBar(
         backgroundColor: secondBackground,
+        automaticallyImplyLeading: false,
         title: Row(
           children: [
             CircleAvatar(
@@ -50,7 +51,8 @@ class HomeMenu extends StatelessWidget {
                 itemBuilder: (context, index) {
                   final movie = corouselMovies[index];
                   return Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 8.0), // Jarak antar gambar
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 8.0),
                     child: MyImg(
                       imageUrl: movie.imageUrl,
                       borderRadius: 10,
@@ -60,8 +62,6 @@ class HomeMenu extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 24),
-
-            // Bagian Popular Movies
             MyTxt(
               text: 'Popular movies',
               fontSize: 25,
@@ -80,13 +80,13 @@ class HomeMenu extends StatelessWidget {
                     imageUrl: movie.imageUrl,
                     title: movie.title,
                     genre: movie.genre,
+                    studio:movie.studio,
+                    rating: movie.rating,
                   );
                 },
               ),
             ),
             const SizedBox(height: 24),
-
-            // Bagian For You
             MyTxt(
               text: 'For you',
               fontSize: 25,
@@ -105,13 +105,13 @@ class HomeMenu extends StatelessWidget {
                     imageUrl: movie.imageUrl,
                     title: movie.title,
                     genre: movie.genre,
+                    studio:movie.studio,
+                    rating: movie.rating,
                   );
                 },
               ),
             ),
             const SizedBox(height: 24),
-
-            // Bagian High Rating Movies
             MyTxt(
               text: 'High Rating Movies',
               fontSize: 25,
@@ -130,6 +130,8 @@ class HomeMenu extends StatelessWidget {
                     imageUrl: movie.imageUrl,
                     title: movie.title,
                     genre: movie.genre,
+                    studio:movie.studio,
+                    rating: movie.rating,
                   );
                 },
               ),
